@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class MyDatabaseClass extends SQLiteOpenHelper {
 
-    static final private String DB_NAME="id_pass1";
-    static final private String DB_TABLE="persn";
+    static final private String DB_NAME="notes";
+    static final private String DB_TABLE="note";
     static final private int DB_VER=1;
     Context ctx;
     SQLiteDatabase sqLiteDatabase;
@@ -25,7 +25,7 @@ public class MyDatabaseClass extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table "+DB_TABLE+" (_Sno integer primary key autoincrement,Id varchar(100),Pass varchar(100));");
+        db.execSQL("create table "+DB_TABLE+" (_Sno integer primary key autoincrement,Id varchar(200));");
         Log.i("data","Success");
     }
 
@@ -35,10 +35,10 @@ public class MyDatabaseClass extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public void insert(String s1,String s2){
+    public void insert(String s1){
         sqLiteDatabase=getWritableDatabase();
 
-        sqLiteDatabase.execSQL("insert into "+DB_TABLE+" (Id,Pass) values('"+s1+"','"+s2+"');");
+        sqLiteDatabase.execSQL("insert into "+DB_TABLE+" (Id) values('"+s1+"');");
         Toast.makeText(ctx,"Data Saved",Toast.LENGTH_SHORT).show();
     }
     public ArrayList<StringBuilder> show()
@@ -51,8 +51,7 @@ public class MyDatabaseClass extends SQLiteOpenHelper {
         {
             int s=cursor.getInt(0);
             String s1=cursor.getString(1);
-            String s2=cursor.getString(2);
-            sb.append(s+". "+s1+" = "+s2+"\n");
+            sb.append(s+". "+s1+"\n");
             data.add(sb);
         }
         return data;

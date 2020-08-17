@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -12,7 +11,7 @@ import android.widget.EditText;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    EditText id,pass;
+    EditText note;
     MyDatabaseClass myData;
     MyAdapter adapter;
     RecyclerView r1;
@@ -22,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         r1=(RecyclerView)findViewById(R.id.rec1);
-        id=(EditText) findViewById(R.id.yourId);
-        pass=(EditText)findViewById(R.id.pass);
+        note=(EditText)findViewById(R.id.note);
         myData=new MyDatabaseClass(this);
     }
 
     public void doSave(View view) {
-        myData.insert(id.getText().toString(),pass.getText().toString());
+        myData.insert(note.getText().toString());
+        note.setText(null);
     }
 
     public void doShow(View view) {
