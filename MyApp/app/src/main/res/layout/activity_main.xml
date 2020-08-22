@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#084c61"
+    android:background="#084C61"
     tools:context=".MainActivity">
 
 
@@ -57,8 +57,8 @@
         android:layout_height="60dp"
         android:layout_below="@+id/Save"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="263dp"
-        android:layout_marginTop="-60dp"
+        android:layout_marginStart="267dp"
+        android:layout_marginTop="-58dp"
         android:background="@drawable/my_but"
         android:onClick="doShow"
         android:text="Show"
@@ -70,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/Save"
-        android:layout_marginTop="0dp" />
+        android:layout_marginTop="9dp" />
 
 
 </RelativeLayout>

@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        r1=(RecyclerView)findViewById(R.id.rec1);
-        note=(EditText)findViewById(R.id.note);
-        myData=new MyDatabaseClass(this);
+        r1 = (RecyclerView) findViewById(R.id.rec1);
+        note = (EditText) findViewById(R.id.note);
+        myData = new MyDatabaseClass(this);
     }
 
     public void doSave(View view) {
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void doShow(View view) {
-        ArrayList<StringBuilder>data=myData.show();
-        adapter=new MyAdapter(this,data);
+        ArrayList<StringBuilder> data = myData.show();
+        adapter = new MyAdapter(this, data);
         r1.setAdapter(adapter);
         r1.setLayoutManager(new LinearLayoutManager(this));
     }
