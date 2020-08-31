@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -37,5 +38,9 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MyAdapter(this, data);
         r1.setAdapter(adapter);
         r1.setLayoutManager(new LinearLayoutManager(this));
+    }
+    public void doDisp(View view) {
+        Intent intent=new Intent(this,Displaying.class);
+        startActivity(intent);
     }
 }

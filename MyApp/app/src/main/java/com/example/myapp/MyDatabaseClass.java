@@ -56,4 +56,18 @@ public class MyDatabaseClass extends SQLiteOpenHelper {
         }
         return data;
     }
+    public void show1()
+    {
+        sqLiteDatabase=getReadableDatabase();
+        Cursor cursor =sqLiteDatabase.rawQuery("Select * from "+DB_TABLE,null);
+        StringBuilder sb=new StringBuilder();
+        ArrayList<StringBuilder> data=new ArrayList<>();
+        while (cursor.moveToNext())
+        {
+            int s=cursor.getInt(0);
+            String s1=cursor.getString(1);
+            sb.append(s+". "+s1+"\n");
+        }
+        Toast.makeText(ctx,sb.toString(),Toast.LENGTH_SHORT).show();
+    }
 }

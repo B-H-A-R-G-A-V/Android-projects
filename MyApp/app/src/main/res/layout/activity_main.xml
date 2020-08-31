@@ -72,5 +72,19 @@
         android:layout_below="@+id/Save"
         android:layout_marginTop="9dp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/note"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/Save"
+        android:background="@drawable/my_but"
+        android:onClick="doDisp"
+        android:text="Display"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>
