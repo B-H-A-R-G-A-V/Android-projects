@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "320150300863",
+    "project_id": "tres-5d629",
+    "storage_bucket": "tres-5d629.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320150300863:android:b41106b0eef1d7eb1f7e0a",
+        "android_client_info": {
+          "package_name": "com.example.tres"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320150300863-89682umk6b25t5pf98dl0j96prjgo9us.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiCJwP2vLd8SKxnJ_3pigHnm-r9eoC9dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320150300863-89682umk6b25t5pf98dl0j96prjgo9us.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
